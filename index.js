@@ -11,12 +11,10 @@ function mondayWork(params='go to the office') {
 
 
 
-function wrapAdjective(params = "*"){
-        const innerF = function (param="special"){
-            return `You are ${params}${param}${params}!`
+function wrapAdjective(paramout = "*"){
+        return function (paramin="special"){
+            return `You are ${paramout}${paramin}${paramout}!`
         }
-    
-        return innerF;
 }
 
-wrapAdjective("!!!")
+console.log(wrapAdjective("!!!"))
